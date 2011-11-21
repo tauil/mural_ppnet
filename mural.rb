@@ -12,9 +12,8 @@ a.get('http://www.pontepreta.net/mural/mural.php') do |page|
   end.click_button
 
   my_page.search(".//span[@class='Texto']").each do |base|
-    puts base.search(".//font[@color='#FFFF66']")
-    puts "\n --------- x ------- \n"
-    puts base.search(".//p[@align='justify']")
+    puts base.search(".//font[@color='#FFFF66']").text
+    puts base.search(".//p[@align='justify']").text
     puts "\n ---------------------------------------------- \n"
   end
 
